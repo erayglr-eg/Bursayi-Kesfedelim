@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anadolu Arabaları Müzesi - Go To Bursa</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Kendi CSS kodlarımız -->
+    <style>
+        /* Logo boyutu */
+        .logo {
+            height: 60px;
+        }
+
+        /* Üstteki büyük fotoğraf */
+        .ust-foto {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;       /* resim bozulmadan kutuyu doldurur */
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        /* Kategori yazısı */
+        .kategori {
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Açıklama yazısı */
+        .aciklama {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+
+        /* Diğer mekanlar kartları */
+        .diger-foto {
+            height: 150px;
+            object-fit: cover;
+        }
+
+        /* Tıklanabilir kart: link rengi ve alt çizgi olmasın */
+        .kart-link {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Fareyle üstüne gelince kart hafif yukarı kalksın */
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- ÜST KISIM (HEADER) -->
+    <header>
+
+        <!-- MENÜ (NAVBAR) -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="anasayfa.html">
+                    <img src="image/logo.jpg" alt="Logo" class="logo">
+                </a>
+
+                <!-- Küçük ekranda açılan menü butonu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu">
+
+                    <!-- Menü linkleri -->
+                    <ul class="navbar-nav align-items-lg-center ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="anasayfa.html">Anasayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kesfet.html">Keşfet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rotalar.html">Rotalar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="giris.html">Giriş Yap veya Kayıt Ol</a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-light" href="firma-ekle.html">Firma ekle</a>
+                        </li>
+                        <li class="nav-item ms-lg-2 my-1 my-lg-0">
+                            <a class="btn btn-primary" href="#">TR</a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-secondary" href="#">EN</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- ANA İÇERİK (MAIN) -->
+    <main class="flex-grow-1">
+
+        <!-- ÜST FOTOĞRAF, BAŞLIK VE AÇIKLAMA -->
+        <div class="container">
+            <img src="image/tofas-muzesi.jpg" class="ust-foto" alt="Anadolu Arabaları Müzesi">
+
+            <p class="kategori">Müze</p>
+            <h1>Anadolu Arabaları Müzesi</h1>
+
+            <p class="aciklama">
+                Resmî adıyla Tofaş Bursa Anadolu Arabaları Müzesi, Türkiye'nin ilk ve tek Anadolu arabaları müzesi.
+                2002 yılında, Bursa'nın Umurbey Mahallesi'nde Tofaş tarafından yenilenen tarihi yapılarda açıldı.
+                Müzede Anadolu'da eskiden kullanılan at arabalarını ve Tofaş'ın ürettiği Murat 124, Murat 131 gibi
+                otomobilleri bir arada görebilirsiniz. Eski bir araba atölyesi, sanat galerisi ve geniş bir bahçesi
+                de var. Anadolu'da ulaşımın at arabasından otomobile nasıl değiştiğini görmek için güzel bir durak.
+            </p>
+        </div>
+
+        <!-- KISACA BİLGİLER -->
+        <div class="container mb-5">
+            <h3 class="mb-3">Kısaca</h3>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Konum:</strong> Umurbey Mahallesi, Yıldırım</li>
+                <li class="list-group-item"><strong>Açılış:</strong> 2002</li>
+                <li class="list-group-item"><strong>Alan:</strong> 17 dönüm</li>
+                <li class="list-group-item"><strong>Koleksiyon:</strong> At arabaları ve Tofaş otomobilleri</li>
+                <li class="list-group-item"><strong>Ayrıca:</strong> Sanat galerisi ve bahçe</li>
+            </ul>
+        </div>
+
+        <!-- DİĞER MEKANLAR -->
+        <div class="container mb-5">
+            <h3 class="mb-4">Diğer Mekanlar</h3>
+
+            <div class="row g-4">
+
+                <div class="col-6 col-lg-3">
+                    <a href="karagoz-muzesi.html" class="kart-link">
+                        <div class="card h-100">
+                            <img src="image/karagoz-muzesi.jpg" class="card-img-top diger-foto" alt="Karagöz Müzesi">
+                            <div class="card-body">
+                                <h6 class="card-title">Karagöz Müzesi</h6>
+                                <p class="card-text text-muted">Müze</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="card h-100">
+                        <img src="image/kultur-sanat.jpg" class="card-img-top diger-foto" alt="Yeşil Türbe">
+                        <div class="card-body">
+                            <h6 class="card-title">Yeşil Türbe</h6>
+                            <p class="card-text text-muted">Türbe &amp; Mimari</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="card h-100">
+                        <img src="image/kent-muzesi.jpg" class="card-img-top diger-foto" alt="Bursa Kent Müzesi">
+                        <div class="card-body">
+                            <h6 class="card-title">Bursa Kent Müzesi</h6>
+                            <p class="card-text text-muted">Müze</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="card h-100">
+                        <img src="image/muradiye-kulliyesi.jpg" class="card-img-top diger-foto" alt="Muradiye Külliyesi">
+                        <div class="card-body">
+                            <h6 class="card-title">Muradiye Külliyesi</h6>
+                            <p class="card-text text-muted">Külliye &amp; Mimari</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    
+
+    </main>
+
+    <!-- ALT KISIM (FOOTER) -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Go To Bursa</h5>
+                    <p>Bursa'nın tarihini, doğasını ve lezzetlerini adım adım keşfedin.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Sayfalar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="anasayfa.html" class="text-white text-decoration-none">Anasayfa</a></li>
+                        <li><a href="kesfet.html" class="text-white text-decoration-none">Keşfet</a></li>
+                        <li><a href="rotalar.html" class="text-white text-decoration-none">Rotalar</a></li>
+                        <li><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+                        <li><a href="giris.html" class="text-white text-decoration-none">Giriş Yap veya Kayıt Ol</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>İletişim</h5>
+                    <p>Bursa, Türkiye</p>
+                    <a href="firma-ekle.html" class="text-white">Firma ekle</a>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2026 Go To Bursa - Ders projesi</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS (menü butonunun çalışması için) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

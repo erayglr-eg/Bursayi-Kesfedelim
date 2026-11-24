@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotalar - Go To Bursa</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Kendi CSS kodlarımız -->
+    <style>
+        /* Logo boyutu */
+        .logo {
+            height: 60px;
+        }
+
+        /* Başlık kısmı */
+        .baslik {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* Kart fotoğrafları aynı boyda olsun */
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;       /* resim bozulmadan kutuyu doldurur */
+        }
+
+        /* Kategori yazısı (kartın üstündeki küçük yazı) */
+        .kategori {
+            font-size: 14px;
+            color: green;
+            font-weight: bold;
+        }
+
+        /* Tıklanabilir kart: link rengi ve alt çizgi olmasın */
+        .kart-link {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Fareyle üstüne gelince kart hafif yukarı kalksın */
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- ÜST KISIM (HEADER) -->
+    <header>
+
+        <!-- MENÜ (NAVBAR) -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="anasayfa.html">
+                    <img src="image/logo.jpg" alt="Logo" class="logo">
+                </a>
+
+                <!-- Küçük ekranda açılan menü butonu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu">
+
+                    <!-- Menü linkleri -->
+                    <ul class="navbar-nav align-items-lg-center ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="anasayfa.html">Anasayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kesfet.html">Keşfet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="rotalar.html">Rotalar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="giris.html">Giriş Yap veya Kayıt Ol</a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-light" href="firma-ekle.html">Firma ekle</a>
+                        </li>
+                        <li class="nav-item ms-lg-2 my-1 my-lg-0">
+                            <a class="btn btn-primary" href="#">TR</a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-secondary" href="#">EN</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- ANA İÇERİK (MAIN) -->
+    <main class="flex-grow-1">
+
+        <!-- BAŞLIK KISMI -->
+        <div class="container text-center baslik">
+            <h1>Keşfedilecek Rotalar</h1>
+            <h4 class="text-secondary">Bursa'nın eşsiz güzelliklerini adım adım keşfedin</h4>
+        </div>
+
+        <!-- ROTA KARTLARI -->
+        <div class="container mb-5">
+            <div class="row g-4">
+
+                <!-- Kart 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/uludag-zirve.jpg" class="card-img-top" alt="2543 Metreye Yolculuk">
+                        <div class="card-body">
+                            <p class="kategori">Doğa &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">2543 Metreye Yolculuk</h5>
+                            <p class="card-text">Uludağ'ın zirvesine yolculuk.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 6 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <a href="gastro-tur-merkez.html" class="kart-link">
+                        <div class="card h-100">
+                            <img src="image/gastro-tur.jpg" class="card-img-top" alt="Gastro Tur: Merkez">
+                            <div class="card-body">
+                                <p class="kategori">Gastronomi &amp; Kültür Rotaları</p>
+                                <h5 class="card-title">Gastro Tur: Merkez</h5>
+                                <p class="card-text">Bursa'nın merkez lezzetlerini keşfedin.</p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                📍 7 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Kart 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/zeytin-rotasi.jpg" class="card-img-top" alt="Zeytin ve Zeytinyağı Rotası">
+                        <div class="card-body">
+                            <p class="kategori">Gastronomi &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">Zeytin ve Zeytinyağı Rotası</h5>
+                            <p class="card-text">Güney Marmara'nın zeytin rotasını keşfedin.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 8 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/osmanli-padisahlari.jpg" class="card-img-top" alt="Osmanlı Padişahları Turu">
+                        <div class="card-body">
+                            <p class="kategori">Tarih &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">Osmanlı Padişahları Turu</h5>
+                            <p class="card-text">Osmanlı padişahlarının izinden Bursa.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 6 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/bir-gunde-bursa.jpg" class="card-img-top" alt="Bir Günde Bursa Turu">
+                        <div class="card-body">
+                            <p class="kategori">Tarih &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">Bir Günde Bursa Turu</h5>
+                            <p class="card-text">Bursa'nın en önemli noktalarını bir günde görün.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 6 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/iznik-rotasi.jpg" class="card-img-top" alt="Tarihten Doğaya İznik Rotası">
+                        <div class="card-body">
+                            <p class="kategori">Doğa &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">Tarihten Doğaya İznik Rotası</h5>
+                            <p class="card-text">İznik'in tarihini ve doğasını birlikte keşfedin.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 4 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 7 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/sudan-ibaret.jpg" class="card-img-top" alt="Velhasıl Bursa Sudan İbarettir Turu">
+                        <div class="card-body">
+                            <p class="kategori">Doğa &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">Velhasıl Bursa Sudan İbarettir Turu</h5>
+                            <p class="card-text">Bursa'nın su kaynaklarını ve termal değerlerini keşfedin.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 5 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 8 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/mavi-rota.jpg" class="card-img-top" alt="Tuzlu Sudan Tatlı Suya: Mavi Rota">
+                        <div class="card-body">
+                            <p class="kategori">Doğa &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">Tuzlu Sudan Tatlı Suya: Mavi Rota</h5>
+                            <p class="card-text">Marmara'dan göllere, Bursa'nın mavi rotası.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 4 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 9 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/zeytin-antik-kent.jpg" class="card-img-top" alt="Bir Nefeste Zeytin Bahçelerinden Antik Kente">
+                        <div class="card-body">
+                            <p class="kategori">Doğa &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">Bir Nefeste Zeytin Bahçelerinden Antik Kente</h5>
+                            <p class="card-text">Zeytin bahçeleri ve antik kentler arasında yolculuk.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 6 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 10 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/hanlar-bolgesi.jpg" class="card-img-top" alt="On Bin Adımda Hanlar Bölgesi">
+                        <div class="card-body">
+                            <p class="kategori">Tarih &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">On Bin Adımda Hanlar Bölgesi</h5>
+                            <p class="card-text">Tarihi Hanlar Bölgesi'ni 10.000 adımda gezin.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 16 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 11 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/cocugumla-geziyorum.jpg" class="card-img-top" alt="Çocuğumla Geziyorum">
+                        <div class="card-body">
+                            <p class="kategori">Tarih &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">Çocuğumla Geziyorum</h5>
+                            <p class="card-text">Çocuklarla birlikte Bursa'yı keşfedin.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 5 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 12 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/muzeler-sehri.jpg" class="card-img-top" alt="Müzeler Şehri Bursa">
+                        <div class="card-body">
+                            <p class="kategori">Tarih &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">Müzeler Şehri Bursa</h5>
+                            <p class="card-text">Bursa'nın zengin müze koleksiyonlarını keşfedin.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 13 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 13 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/bursa-kalesi.jpg" class="card-img-top" alt="Bursa Kalesi'nde Bir Gün">
+                        <div class="card-body">
+                            <p class="kategori">Tarih &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">Bursa Kalesi'nde Bir Gün</h5>
+                            <p class="card-text">Tarihi Bursa Kalesi'ni ve surlarını keşfedin.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 16 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 14 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/evliyalar-sehri.jpg" class="card-img-top" alt="Evliyalar Şehri Bursa">
+                        <div class="card-body">
+                            <p class="kategori">Tarih &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">Evliyalar Şehri Bursa</h5>
+                            <p class="card-text">Bursa'nın manevi atmosferini yaşayın.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 9 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 15 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/adim-adim-bursa.jpg" class="card-img-top" alt="Adım Adım Bursa">
+                        <div class="card-body">
+                            <p class="kategori">Tarih &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">Adım Adım Bursa</h5>
+                            <p class="card-text">Bursa'nın tarihi merkezini adım adım keşfedin.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 23 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 16 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/iznik-dort-medeniyet.jpg" class="card-img-top" alt="İznik: Dört Medeniyet Bir Başkent">
+                        <div class="card-body">
+                            <p class="kategori">Tarih &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">İznik: Dört Medeniyet Bir Başkent</h5>
+                            <p class="card-text">Dört büyük medeniyete ev sahipliği yapmış İznik'i keşfedin.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 8 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kart 17 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <img src="image/merkezden-zirveye.jpg" class="card-img-top" alt="Merkezden Zirveye">
+                        <div class="card-body">
+                            <p class="kategori">Tarih &amp; Kültür Rotaları</p>
+                            <h5 class="card-title">Merkezden Zirveye</h5>
+                            <p class="card-text">Bursa şehir merkezinden Uludağ'ın zirvesine.</p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            📍 5 Durak &nbsp; 📏 3 km &nbsp; ⏰ 2-3 saat
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    
+
+    </main>
+
+    <!-- ALT KISIM (FOOTER) -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Go To Bursa</h5>
+                    <p>Bursa'nın tarihini, doğasını ve lezzetlerini adım adım keşfedin.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Sayfalar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="anasayfa.html" class="text-white text-decoration-none">Anasayfa</a></li>
+                        <li><a href="kesfet.html" class="text-white text-decoration-none">Keşfet</a></li>
+                        <li><a href="rotalar.html" class="text-white text-decoration-none">Rotalar</a></li>
+                        <li><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+                        <li><a href="giris.html" class="text-white text-decoration-none">Giriş Yap veya Kayıt Ol</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>İletişim</h5>
+                    <p>Bursa, Türkiye</p>
+                    <a href="firma-ekle.html" class="text-white">Firma ekle</a>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2026 Go To Bursa - Ders projesi</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS (menü butonunun çalışması için) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
